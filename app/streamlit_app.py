@@ -2,7 +2,7 @@
 """
 Streamlit dashboard to explore results produced by the pipeline.
 
-Repo layout assumed:
+Repo layout:
 repo-root/
 ├─ app/streamlit_app.py         <-- this file
 ├─ src/utils_viz.py
