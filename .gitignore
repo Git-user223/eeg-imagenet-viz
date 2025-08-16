@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+.env.*
+
+# macOS
+.DS_Store
+
+# notebooks (if any local junk)
+.ipynb_checkpoints/
+
+# training outputs not used by the app
+data/
+models/
