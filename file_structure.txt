@@ -1,0 +1,15 @@
+Streamlit dashboard for EEG-ImageNet lightweight models.
+
+Repo FileStructure Layout
+repo-root/
+├─ app/streamlit_app.py
+├─ src/utils_viz.py
+├─ results/
+│  ├─ summary.csv
+│  └─ pred_sub{ID}_{model}.parquet
+├─ plots/   
+│  ├─ acc_by_model.html
+│  ├─ acc_by_subject.html
+│  ├─ acc_by_trend.html
+│  ├─ confmat_sub{ID}_{model}.html
+│  ├─ topk_by_model.html
