@@ -131,7 +131,6 @@ data_exp_tab, results_tab = st.tabs(['Data Exploration','Results'])
 ## Data Explorer: 
 with data_exp_tab:
     # Show snippets of brainwaves for specific images: 
-    
     ## Fish
     st.title('Goldfish Image/EEG Reading Pair - Subect 0')
     gf_snippet_L, gf_snippet_R = st.columns([0.20,0.8])   
@@ -141,7 +140,7 @@ with data_exp_tab:
         st.caption('Image shown to subject 0 to produce the EEG reading on the right')
     with gf_snippet_R:
         with open(f"{PLOTS_DIR}/goldfish_snippet.html", "r") as f:
-            st.components.v1.html(f.read(), height=520, scrolling=True)
+            st.components.v1.html(f.read(), height=1200, scrolling=True)
 
     ## DOG: 
     st.title('Dog Image/EEG Reading Pair - Subject 0')
@@ -152,9 +151,9 @@ with data_exp_tab:
         st.caption('Image shown to subject 0 to produce the EEG reading on the right')
     with dog_snippet_R:
         with open(f"{PLOTS_DIR}/dog_snippet.html", "r") as f:
-            st.components.v1.html(f.read(), height=520, scrolling=True)
+            st.components.v1.html(f.read(), height=1200, scrolling=True)
 
-
+    #Additional Plots showing timeseries, channel correlations, frequency spectrogram, trial heatmap
     with open(f"{PLOTS_DIR}/trial_timeseries.html", "r") as f:
         st.components.v1.html(f.read(), height=520, scrolling=True)
         st.caption('Multi-channel raw signal - Line plot of the EEG signals over time, one line per electrode/channel.')
@@ -204,7 +203,7 @@ with results_tab:
         st.components.v1.html(f.read(), height=520, scrolling=True)
 
     # Drilldown
-    st.subheader("Dive Deeper")
+    st.subheader("Dive Deeper - Per Subject/Model Results")
     colA, colB = st.columns(2)
     with colA:
         subject = st.selectbox("Subject", sorted([int(s) for s in summary["subject"].dropna().unique()]))
@@ -218,7 +217,6 @@ with results_tab:
 
     if pf and pf.exists():
         dfp = load_preds(pf)
-        st.dataframe(dfp)
         st.markdown(f"**Subject {subject} — Model {model}**")
 
         # Confusion matrix

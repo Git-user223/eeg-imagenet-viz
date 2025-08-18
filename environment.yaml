@@ -1,0 +1,20 @@
+name: eegviz
+channels: [conda-forge, defaults, pytorch]
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - plotly
+  - streamlit
+  - mne
+  - pytorch
+  - torchvision
+  - torchaudio
+  - umap-learn
+  - pip
+  - pip:
+    - imbalanced-learn
+    - tqdm
+    - pyarrow
