@@ -15,4 +15,5 @@ venv/
 .ipynb_checkpoints/
 
 # training outputs not used by the app
+data/
 models/
