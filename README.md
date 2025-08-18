@@ -1,7 +1,7 @@
 # EEG-ImageNet-Viz
 
 
-<img width="600" alt="image" src="/Users/charithwickrema/Desktop/Data Viz/Final/EEG-ImageNet-Dataset/eeg-imagenet-viz/assets/dataset_overview_diagram.png">
+<img width="600" alt="image" src="/assets/dataset_overview_diagram.png">
 
 ### Interactive visualizations and evaluation tools for **EEG-ImageNet**–style experiments. This repo helps you:
 
