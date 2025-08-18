@@ -140,7 +140,7 @@ with data_exp_tab:
         st.caption('Image shown to subject 0 to produce the EEG reading on the right')
     with gf_snippet_R:
         with open(f"{PLOTS_DIR}/goldfish_snippet.html", "r") as f:
-            st.components.v1.html(f.read(), height=1200, scrolling=True)
+            st.components.v1.html(f.read(), height=700, scrolling=True)
 
     ## DOG: 
     st.title('Dog Image/EEG Reading Pair - Subject 0')
